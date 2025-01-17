@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUTPUT</title>
+    <style>
+        .form-data-container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .form-data-container h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #889688;
+            margin-bottom: 20px;
+        }
+
+        .form-data-container p {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 8px;
+        }
+
+        .form-data-container p strong {
+            color: #111311;
+        }
+
+        .form-data-container span {
+            color: #555;
+            font-style: italic;
+            margin-left: 5px;
+
+        }
+
+
+        button[type="button"] {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-data-container">
+        <h1>FORM DATA</h1>
+        <p><strong>First Name:</strong> <span id="first-name"></span></p>
+        <p><strong>Last Name:</strong> <span id="last-name"></span></p>
+        <p><strong>Password:</strong> <span id="password"></span></p>
+        <p><strong>Confirm Password:</strong> <span id="cpassword"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+        <p><strong>Phone Number:</strong> <span id="phone"></span></p>
+        <p><strong>Gender:</strong> <span id="gender"></span></p>
+        <p><strong>Language:</strong> <span id="language"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+        <p><strong>Course:</strong> <span id="course"></span></p>
+        <p><strong>College:</strong> <span id="college"></span></p>
+        <p><strong>File:</strong> </p>
+        <img id="retrievedImage"  style="width: 800px;">
+        <br>
+        <button type="button" onclick=" clearForm()">CLEAR</button>
+    </div>
+    <script>
+
+        const formData = JSON.parse(localStorage.getItem("formData"));
+
+
+
+        if (formData) {
+
+            document.getElementById("first-name").innerHTML = formData.firstName;
+            document.getElementById("last-name").innerHTML = formData.lastName;
+            document.getElementById("password").innerHTML = formData.password;
+            document.getElementById("cpassword").innerHTML = formData.confirmPassword;
+            document.getElementById("email").innerHTML = formData.email;
+            document.getElementById("dob").innerHTML = formData.dob;
+            document.getElementById("phone").innerHTML = formData.phone;
+            document.getElementById("gender").innerHTML = formData.gender;
+            document.getElementById("language").innerHTML = formData.languages;
+            document.getElementById("address").innerHTML = formData.address;
+            document.getElementById("course").innerHTML = formData.course;
+            document.getElementById("college").innerHTML = formData.college;
+            //document.getElementById("file").innerHTML = formData.file;
+
+
+        }
+
+        const savedImage = localStorage.getItem('savedImage');
+        if (savedImage) {
+          
+            document.getElementById('retrievedImage').src = savedImage;
+        }
+
+        function clearForm() {
+
+            localStorage.removeItem("formData");
+            console.log(localStorage.getItem("formData"));
+
+            window.location.href = "index.html";
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

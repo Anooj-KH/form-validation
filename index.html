@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Application Form</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>APPLICATION FORM</h1>
+        <form action="" method="get">
+            <!-- <p id="demo"></p> -->
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="first-name">First Name :</label>
+                    <input type="text" id="first-name" placeholder="First Name">
+                    <span class="error" id="error-msg1"></span>
+                </div>
+                <div class="input-box">
+                    <label for="last-name">Last Name :</label>
+                    <input type="text" id="last-name" placeholder="Last Name">
+                    <span class="error" id="error-msg2"></span>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="password">Password :</label>
+                    <input type="password" id="password" placeholder="Password">
+                    <div class="error" id="error-msg3"></div>
+                </div>
+                <div class="input-box">
+                    <label for="cpassword">Confirm Password :</label>
+                    <input type="password" id="cpassword" placeholder="Confirm Password">
+                    <div class="error" id="error-msg4"></div>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" placeholder="Email">
+                    <div class="error" id="error-msg5"></div>
+                </div>
+                <div class="input-box">
+                    <label for="dob">Date of Birth :</label>
+                    <input type="date" id="dob">
+                    <div class="error" id="error-msg6"></div>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="phone">Phone Number :</label>
+                    <input type="number" id="phone" placeholder="Phone Number">
+                    <div class="error" id="error-msg7"></div>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <label>Gender :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" id="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" id="gender" value="Female"> Female</label>
+                        <label><input type="radio" name="gender" id="gender" value="Other"> Other </label>
+                        <div class="error" id="error-msg8"></div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label>Languages Known :</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="language" value="English"> English</label>
+                        <label><input type="checkbox" name="language" value="Tamil"> Tamil</label>
+                        <label> <input type="checkbox" name="language" value="Malayalam"> Malayalam</label>
+                        <label><input type="checkbox" name="language" value="Hindi"> Hindi</label>
+                        <div class="error" id="error-msg9"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="address">Permanent Address :</label>
+                    <input type="text" name=" address" id="address">
+                    <div class="error" id="error-msg10"></div>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="course">Course</label>
+                    <select id="course">
+                        <option value="Select Course">Select Course</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Civil">Civil</option>
+                    </select>
+                    <div class="error" id="error-msg11"></div>
+                </div>
+                <div class="input-box">
+                    <label for="college">College</label>
+                    <select id="college">
+                        <option value="Select College">Select College</option>
+                        <option value="Anna University">Anna University</option>
+                        <option value="SRM University">SRM University</option>
+                        <option value="ABC University">ABC University</option>
+                        <option value="XYZ University">XYZ University</option>
+                        <option value="Dubhakur University">Dubhakur University</option>
+                    </select>
+                    <div class="error" id="error-msg12"></div>
+                </div>
+            </div>
+
+            <div><input type="file" id="file"></div>
+            <div class="error" id="error-msg13"></div>
+
+            <div class="button-group">
+                <button type="button" onclick=" validateForm() ">Submit</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+
+        </form>
+        <div class="data" id="preview">
+            <hr>
+            <h1>PREVIEW</h1>
+
+            <p><strong>First Name:</strong> <span id="preview-first-name"></span></p>
+            <p><strong>Last Name:</strong> <span id="preview-last-name"></span></p>
+            <p><strong>Password:</strong> <span id="preview-password"></span></p>
+            <p><strong>Confirm Password:</strong> <span id="preview-cpassword"></span></p>
+            <p><strong>Email:</strong> <span id="preview-email"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="preview-dob"></span></p>
+            <p><strong>Phone Number:</strong> <span id="preview-phone"></span></p>
+            <p><strong>Gender:</strong> <span id="preview-gender"></span></p>
+            <p><strong>Language:</strong> <span id="preview-language"></span></p>
+            <p><strong>Address:</strong> <span id="preview-address"></span></p>
+            <p><strong>Course:</strong> <span id="preview-course"></span></p>
+            <p><strong>College:</strong> <span id="preview-college"></span></p>
+            <p><strong>File:</strong> <span id="preview-file"></span>
+                <img id="savedImage" >
+            </p>
+
+        </div>
+
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

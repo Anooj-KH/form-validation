@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    background-image: url('https://rare-gallery.com/thumbnail/1352147-Python-Programming-Language-CodingA-scrennshot-of.png');
+    background-size:auto;
+    
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 10%;
+}
+
+#preview{
+   display: none;
+} 
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 48%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.error {
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #6d6969;
+}
+
+
+
+.radio-group label,
+.checkbox-group label {
+    margin-bottom: 10px;
+    font-weight: lighter;
+    color: #333;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#address {
+    width: 208%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+.button-group {
+
+    text-align: center;
+}
+
+button[type="button"],
+button[type="reset"] {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+
+}
