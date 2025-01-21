@@ -18,7 +18,7 @@ function validateForm() {
 
     // Patterns
     const namePattern = /^[A-Za-z]+$/;
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d!@#$%^&*()_+=<>?;:{}[\]]{8,}$/;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const phonePattern = /^\d{10}$/;
 
@@ -52,7 +52,7 @@ function validateForm() {
         isValid = false;
     } else if (!passwordPattern.test(password)) {
         document.getElementById("error-msg3").innerHTML = `Must contain at least one number, 
-               one uppercase and lowercase letter, and at least 8 characters.`;
+           one uppercase and lowercase letter, and at least 8 characters.`;
         isValid = false;
     } else {
         document.getElementById("error-msg3").innerHTML = "";
@@ -160,7 +160,7 @@ function validateForm() {
 
 
 
-      if (isValid == false) {
+    if (isValid == false) {
 
         // preview
 
